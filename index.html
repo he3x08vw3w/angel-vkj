@@ -84,7 +84,7 @@ treeIso(2,3);treeIso(7,2);
 flowerIso(2,6,'#ffb8d3');flowerIso(4,7,'#ffe7a0');flowerIso(8,5,'#ffb8d3');flowerIso(10,7,'#fff0c2');flowerIso(6,9,'#ffb8d3');flowerIso(3,10,'#fff0c2');
 const s=iso(5,3);hiveIso(5,3);const c=iso(7,5);chest(7,5);const sg=iso(3,6);signpost(3,6);const p=iso(9,7);portal(9,7);
 // bee hovering near hive, then follows clicked hotspot
-let bx=targetBee?targetBee.x: s[0]+35+Math.sin(t/360)*13,by=targetBee?targetBee.y:s[1]-70+Math.cos(t/470)*9;
+let bx=targetBee?(Array.isArray(targetBee)?targetBee[0]:targetBee.x):s[0]+35+Math.sin(t/360)*13,by=targetBee?(Array.isArray(targetBee)?targetBee[1]:targetBee.y):s[1]-70+Math.cos(t/470)*9;
 drawBee(bx,by,.78);
 drawTag(s[0],s[1]-65,'THE BEEHIVE');drawTag(c[0],c[1]-35,'LETTER CHEST');drawTag(sg[0],sg[1]-43,'WELCOME SIGN');drawTag(p[0],p[1]-46,'BLOOM GATE');
 }
